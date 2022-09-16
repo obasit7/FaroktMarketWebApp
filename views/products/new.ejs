@@ -1,0 +1,56 @@
+
+<% layout('layout/boilerplate') %> 
+
+<div class="row">
+    <h1 class="text-center">New Product</h1>
+    <div class="col-6 offset-3">
+    <form action="/products" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label class="form-label" for="title">Title</label>
+            <input class="form-control" type="text" id="title" name="product[title]" required>
+            <div class="valid-feedback">
+                Looks Good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="location">Location</label>
+            <input class="form-control" type="text" id="location" name="product[location]" required>
+            <div class="valid-feedback">
+                Looks Good!
+            </div>
+        </div>
+
+        <input type="file" name="image" id="">
+        
+        <!-- <div class="mb-3">
+            <label class="form-label" for="image">Image URL</label>
+            <input class="form-control" type="text" id="image" name="product[image]">
+        </div> -->
+
+        <div class="mb-3">
+            <label class="form-label" for="price">Price</label>
+            <div class="input-group">
+              <span class="input-group-text" id="price-label">PKR</span>
+              <input type="text" class="form-control" id="price" placeholder="0.00" name="product[price]" aria-label="Price" aria-describedby="price-label" required>
+              <div class="valid-feedback">
+                Looks Good!
+              </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="description">Description</label>
+            <textarea class="form-control" type="text" id="description" name="product[description]" required></textarea>
+            <div class="valid-feedback">
+                Looks Good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-secondary">Add Product</button>
+        </div>
+    </form>
+    
+    <a href="/products">Back</a>
+    </div>
+</div>
+
